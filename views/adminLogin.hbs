@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdminLogin</title>
+    <link rel="stylesheet" href="/static/styles/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="logo">
+            <img src="/static/images/user.png" alt="">
+        </div>
+        <div class="text-center mt-4 name" style="margin-bottom: 2.5rem">
+            Admin Sign In
+        </div>
+        <form action="/admlogin" method="post" class="p-3 mt-3">
+            <div class="form-field d-flex align-items-center">
+                <span class="far fa-user"></span>
+                <input type="email" name="username" id="username" placeholder="Username">
+            </div>
+            <div class="form-field d-flex align-items-center">
+                <span class="fas fa-key"></span>
+                <input type="password" name="password" id="pwd" placeholder="Password">
+            </div>
+             {{#if message}} 
+            <div id="msg" class="alert alert-danger ml-4 ">{{message}}</div>
+            {{/if}}
+            <button type="submit" class="btn mt-3" style="margin-top: 1.5rem">LogIn</button>
+        </form>
+    </div>
+    <script>
+        setTimeout(()=>{
+            document.getElementById('msg').style.display='none'
+        },3000)
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+}
+.row{
+    margin: 0;
+}
+body{
+height: 100%;
+overflow-y: hidden;
+background: linear-gradient(360deg, #dddddd, #197fcc);
+}
+h1{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    font-family: "Open Sans", sans-serif;
+    font-size: 15rem;
+}
+a{
+    position: absolute;
+    top: 1rem;
+    right:2rem;
+    background-color: #fff;
+}
+p{
+    font-size: 19px;
+    padding: 5rem;
+    color: rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 850px) {
+    body{
+        overflow-y: scroll;
+        height: fit-content;
+    }
+}
