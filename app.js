@@ -14,7 +14,7 @@ app.set('view engine', 'hbs');
 app.use('/static',express.static(path.join(__dirname,'public')))
 //seting up session
 app.use(session({
-  
+    
   secret:"my_secret_key",
   resave:false,
   saveUninitialized:false,
