@@ -32,7 +32,6 @@ db.connect((err)=>{
 })
 
 
-app.listen(3000,()=>{
-    console.log('server started in http://localhost:3000 !!');
+app.listen(3001,()=>{
+    console.log('server started in http://localhost:3001 !!');
   })
-

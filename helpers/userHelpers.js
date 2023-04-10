@@ -8,9 +8,11 @@ module.exports={
     doLogin: (userData)=>{
         return new Promise(async(resolve,reject)=>{
             const response={}
-            const user=await db.get().collection(collection.ADMIN_COLLECTION).findOne({email: userData.email}) 
+            const user=await db.get().collection(collection.ADMIN_COLLECTION)
+            .findOne({email: userData.email}) 
             if(user){
-                bcrypt.compare(userData.password, user.password).then((status)=>{
+                bcrypt.compare(userData.password, user.password)
+                .then((status)=>{
                     if(status){
                         response.user=user
                         resolve(response)

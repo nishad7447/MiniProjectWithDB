@@ -14,6 +14,7 @@ const pas='asdf'
 const message='Incorrect entry !!!'
 
 router.get('/',(req,res)=>{
+    
     if (req.session.loggedin) {
         res.redirect('/home');
     } else {
@@ -22,7 +23,8 @@ router.get('/',(req,res)=>{
 })
 
 router.post('/login',(req,res)=>{
-    userHelpers.doLogin(req.body).then((response)=>{
+    userHelpers.doLogin(req.body)
+    .then((response)=>{
         if(response.status=='Invalid User'){
             req.session.emailErr=response.status
             res.redirect('/')
